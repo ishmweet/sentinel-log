@@ -90,25 +90,25 @@ The report lands in `reports/sentinellog_auth_YYYYMMDD_HHMMSS.csv`.
 ### Export to JSON
 
 ```bash
-python main.py --file logs/sample_apache.log --export json
+python3 main.py --file logs/sample_apache.log --export json
 ```
 
 ### Custom output directory
 
 ```bash
-python main.py --file logs/sample_auth.log --export csv --output /tmp/my-reports/
+python3 main.py --file logs/sample_auth.log --export csv --output /tmp/my-reports/
 ```
 
 ### Suppress the banner (useful for piping)
 
 ```bash
-python main.py --file logs/sample_auth.log --no-banner
+python3 main.py --file logs/sample_auth.log --no-banner
 ```
 
 ### Quiet mode (export only, no terminal output)
 
 ```bash
-python main.py --file logs/sample_auth.log --export json --quiet
+python3 main.py --file logs/sample_auth.log --export json --quiet
 ```
 
 ---
@@ -183,19 +183,3 @@ for alert in result.alerts:
 - [ ] Custom rule YAML — let users define their own detection rules without touching Python
 
 ---
-
-## Contributing
-
-Pull requests are welcome. For major changes please open an issue first.
-
-```bash
-# Run a quick sanity check after changes
-python main.py --file logs/sample_auth.log
-python main.py --file logs/sample_apache.log --export json
-```
-
----
-
-## License
-
-MIT
