@@ -168,18 +168,3 @@ export_json(result, "reports/")
 for alert in result.alerts:
     print(alert.severity, alert.alert_type, alert.source_ip)
 ```
-
----
-
-## Future Roadmap
-
-- [ ] GeoIP lookups — annotate IPs with country/ASN via offline MaxMind database
-- [ ] Allowlist support — skip known-good IPs from detection
-- [ ] Time-window analysis — detect slow-and-low brute-force attempts
-- [ ] Nginx log support — extend Apache parser to Nginx combined format
-- [ ] Syslog/journald support — parse Linux system logs
-- [ ] HTML report — self-contained HTML dashboard export
-- [ ] Watch mode — `--watch` flag to tail a live log file
-- [ ] Custom rule YAML — let users define their own detection rules without touching Python
-
----
